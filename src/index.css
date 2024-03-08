@@ -9,14 +9,16 @@
 
 body {
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   background-image: radial-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+  overflow-x: hidden;
 }
 
 #root {
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
@@ -24,12 +26,12 @@ body {
 main {
   width: 100%;
   max-width: 1500px;
-  padding: 0 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 2rem;
+  padding: 2rem;
 }
 
 /* header styling */
@@ -332,6 +334,28 @@ main {
   align-self: flex-end;
   outline: 0;
   cursor: pointer;
+}
+
+/* footer */
+footer {
+  font-size: 1rem;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 0.1rem;
+  margin-bottom: 2rem;
+}
+
+footer a {
+  font-weight: 700;
+  color: rgb(127, 255, 244);
+  margin-left: 0.2rem;
+}
+
+footer img {
+  width: 1.5rem;
+  margin: 0 0.5rem;
 }
 
 @keyframes zoom {

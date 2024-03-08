@@ -4,6 +4,7 @@ import Rules from "./Rules";
 import Paper from "./assets/images/icon-paper.svg";
 import Rock from "./assets/images/icon-rock.svg";
 import Scissors from "./assets/images/icon-scissors.svg";
+import Heart from "./assets/images/heart2.png";
 
 const App = () => {
   const [showRules, setShowRules] = useState(false);
@@ -155,6 +156,17 @@ const App = () => {
           RULES
         </button>
       </main>
+      <footer>
+        Developed with <img src={Heart} alt="heart" /> by{"   "}
+        <a
+          href="https://baniyaportfolio.web.app"
+          rel="noreferrer"
+          target="_blank"
+        >
+          {" "}
+          Ritesh
+        </a>
+      </footer>
     </>
   );
 };
