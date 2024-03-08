@@ -178,9 +178,10 @@ main {
 }
 
 .col .circle {
-  width: 15rem;
+  transform: scale(1.25);
+  /* width: 15rem;
   height: 15rem;
-  padding: 1.5rem;
+  padding: 1.5rem; */
 }
 
 .col .circle::before,
@@ -188,16 +189,11 @@ main {
   transform: scale(0);
 }
 
-.col .inner-circle img {
-  width: 5rem;
-}
-
 .blank-circle {
   width: 10rem;
   height: 10rem;
   border-radius: 10rem;
   background-color: hsl(237, 49%, 15%);
-  margin-top: 2rem;
 }
 
 .who {
@@ -206,6 +202,7 @@ main {
   font-weight: 600;
   font-size: 1.25rem;
   letter-spacing: 0.15rem;
+  text-align: center;
 }
 
 .result {
@@ -258,14 +255,14 @@ main {
 }
 
 .winner::before {
-  width: 20rem;
-  height: 20rem;
+  width: 15rem;
+  height: 15rem;
   border-radius: 20rem;
 }
 
 .winner::after {
-  width: 24rem;
-  height: 24rem;
+  width: 20rem;
+  height: 20rem;
   border-radius: 24rem;
 }
 
@@ -288,11 +285,14 @@ main {
   border-radius: 0.5rem;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   gap: 2rem;
   animation: zoom 0.2s forwards ease-out;
 }
 
 .card-header {
+  width: 100%;
   color: hsl(229, 25%, 31%);
   display: flex;
   align-items: center;
@@ -308,6 +308,14 @@ main {
 
 .btn-icon {
   width: 90%;
+}
+
+.card-content {
+  width: 100%;
+}
+
+.image-rules {
+  width: 100%;
 }
 
 .card.open {
@@ -335,5 +343,62 @@ main {
   }
   100% {
     transform: scale(1);
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .toggle-rules {
+    align-self: center;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  html {
+    font-size: 12px;
+  }
+  .options-container {
+    background-size: 20rem;
+    min-width: 220px;
+  }
+  .face-off {
+    flex-wrap: wrap;
+  }
+  .col {
+    order: 1;
+  }
+  .result {
+    order: 2;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .card {
+    width: 100vw;
+    height: 100vh;
+    flex-direction: column;
+  }
+  .el {
+    flex: none;
+  }
+  .el.card-title {
+    order: -1;
+  }
+  .el.card-content {
+    order: 1;
+  }
+  .el.toggle-btn {
+    order: 2;
+  }
+  .col .circle {
+    width: 8rem;
+    height: 8rem;
+  }
+  .blank-circle {
+    width: 8rem;
+    height: 8rem;
+  }
+  .col {
+    flex-direction: column-reverse;
   }
 }

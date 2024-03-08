@@ -47,40 +47,40 @@ const App = () => {
     if (playerRef.current && compRef.current) {
       let p = playerRef.current.children[1].id;
       let c = compRef.current.children[1].id;
-      if (p == c) {
+      if (p === c) {
         setResult("it's a draw");
       } else if (p === "rock") {
         if (c === "paper") {
-          setScore(score - 1);
+          setScore((score) => score - 1);
           setResult("you lose");
           playerRef.current.children[1].classList.remove("winner");
           compRef.current.children[1].classList.add("winner");
         } else {
-          setScore(score + 1);
+          setScore((score) => score + 1);
           setResult("you win");
           compRef.current.children[1].classList.remove("winner");
           playerRef.current.children[1].classList.add("winner");
         }
       } else if (p === "scissors") {
         if (c === "paper") {
-          setScore(score + 1);
+          setScore((score) => score + 1);
           setResult("you win");
           compRef.current.children[1].classList.remove("winner");
           playerRef.current.children[1].classList.add("winner");
         } else {
-          setScore(score - 1);
+          setScore((score) => score - 1);
           setResult("you lose");
           playerRef.current.children[1].classList.remove("winner");
           compRef.current.children[1].classList.add("winner");
         }
       } else {
         if (c === "rock") {
-          setScore(score + 1);
+          setScore((score) => score + 1);
           setResult("you win");
           compRef.current.children[1].classList.remove("winner");
           playerRef.current.children[1].classList.add("winner");
         } else {
-          setScore(score - 1);
+          setScore((score) => score - 1);
           setResult("you lose");
           playerRef.current.children[1].classList.remove("winner");
           compRef.current.children[1].classList.add("winner");

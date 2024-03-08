@@ -7,8 +7,8 @@ const Rules = ({ setShowRules }) => {
     <div className="card-backdrop">
       <div className={`card rules ${setShowRules ? "open" : ""}`}>
         <div className="card-header">
-          <h1 className="card-title">RULES</h1>
-          <button className="close-card toggle-btn">
+          <h1 className="card-title el">RULES</h1>
+          <button className="close-card toggle-btn el">
             <img
               src={CloseButton}
               alt="Close"
@@ -19,7 +19,7 @@ const Rules = ({ setShowRules }) => {
             />
           </button>
         </div>
-        <div className="card-content">
+        <div className="card-content el">
           <img src={RulesImage} alt="Rules" className="image-rules" />
         </div>
       </div>
